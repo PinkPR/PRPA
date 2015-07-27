@@ -1,4 +1,4 @@
-CC = clang++
+CC = g++
 CFLAGS = -std=c++11 -Wall -Wextra -g3
 
 SRC = $(addprefix src/,         \
@@ -6,6 +6,7 @@ SRC = $(addprefix src/,         \
             microphone.cc       \
             output-stream.cc    \
             delay.cc            \
+						reverb.cc						\
         )
 
 TARGET = test
