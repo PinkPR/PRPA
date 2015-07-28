@@ -8,6 +8,7 @@
 #include "output-stream.hh"
 #include "delay.hh"
 #include "reverb.hh"
+#include "swell.hh"
 
 #define RATE    44100
 
@@ -17,14 +18,16 @@ int main()
 
     Microphone mic(RATE);
     //Delay delay(RATE, 1000, 1.0);
-    Reverb reverb(1.0, 0.9);
+    //Reverb reverb(1.0, 0.9);
+    Swell swell(1.0, RATE, 1.0);
     OutputStream output(RATE);
 
     tbb::pipeline ppl;
 
     ppl.add_filter(mic);
     //ppl.add_filter(delay);
-    ppl.add_filter(reverb);
+    //ppl.add_filter(reverb);
+    ppl.add_filter(swell);
     ppl.add_filter(output);
 
     ppl.run(2);

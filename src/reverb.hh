@@ -8,13 +8,12 @@ class Reverb : public tbb::filter
 {
     public:
         Reverb(float vol, float decay);
-        ~Reverb();
 
     public:
         void* operator()(void* data) override;
 
     private:
-        float           volume;
+        float           vol;
         unsigned int    cnt;
         float           decay;
         float           old_sample;

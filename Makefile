@@ -7,6 +7,7 @@ SRC = $(addprefix src/,         \
             output-stream.cc    \
             delay.cc            \
 						reverb.cc						\
+						swell.cc						\
         )
 
 TARGET = test
