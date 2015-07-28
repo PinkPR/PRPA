@@ -6,6 +6,7 @@ Microphone::Microphone(unsigned int rate)
     PaStreamParameters inputParameters;
 
     inputParameters.device = Pa_GetDefaultInputDevice();
+    //inputParameters.device = 3;
     inputParameters.channelCount = 1;
     inputParameters.sampleFormat = paFloat32;
     inputParameters.suggestedLatency =
@@ -37,8 +38,6 @@ Microphone::operator()(void* data)
     float* sample = new float(0.0f);
 
     int err = Pa_ReadStream(stream, sample, 1);
-
-    std::cout << *sample << std::endl;
 
     return sample;
 }

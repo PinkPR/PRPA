@@ -6,7 +6,10 @@ SRC = $(addprefix src/,         \
             microphone.cc       \
             output-stream.cc    \
             delay.cc            \
-						reverb.cc						\
+            boost.cc            \
+            drive.cc            \
+            reverb.cc           \
+            flanger.cc          \
 						swell.cc						\
         )
 
