@@ -7,7 +7,7 @@
 class Delay : public tbb::filter
 {
     public:
-        Delay(unsigned int sample_rate, unsigned int ms, float vol);
+        Delay(unsigned int sample_rate, unsigned int ms, float vol, float dec);
         ~Delay();
 
     public:
@@ -15,6 +15,7 @@ class Delay : public tbb::filter
 
     private:
         float           volume;
+        float           decay;
         unsigned int    cnt;
         float*          buff;
         unsigned int    buffSize;

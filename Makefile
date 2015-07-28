@@ -6,6 +6,10 @@ SRC = $(addprefix src/,         \
             microphone.cc       \
             output-stream.cc    \
             delay.cc            \
+            boost.cc            \
+            drive.cc            \
+            reverb.cc           \
+            flanger.cc          \
         )
 
 TARGET = test
