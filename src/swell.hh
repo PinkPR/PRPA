@@ -23,8 +23,8 @@ class Swell : public tbb::filter
         float           cnt;
         float           cst;
         bool            ret;
-        float           rate;   // hz, 44100
-        float           length; // in seconds
+        float           rate;
+        float           length;
 };
 
 #endif /* SWELL_HH */

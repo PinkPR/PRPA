@@ -11,6 +11,7 @@ SRC = $(addprefix src/,         \
             reverb.cc           \
             flanger.cc          \
 						swell.cc						\
+						chorus.cc						\
         )
 
 TARGET = test
